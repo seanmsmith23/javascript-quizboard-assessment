@@ -30,7 +30,6 @@ Quiz.prototype.renderQuestion = function(){
   self.container.append($(makeButton(primaryButton, "Next").addClass("next").attr('disabled', true)));
 
   $('.next').click(function(){
-    console.log("clicked");
     self.nextQuestion();
   });
 
@@ -59,7 +58,6 @@ Quiz.prototype.nextQuestion = function(){
     this.removeQuestion();
     this.container.append("<h1>" + this.correct + " of " + this.total + " correct!");
     this.container.append("<h1>" + ((this.correct/this.total)*100) + "%");
-    console.log("true");
   } else {
     this.removeQuestion();
     this.currentQuestion += 1;
